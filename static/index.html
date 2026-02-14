@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Humanizer - Research Domain</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔬 Text Humanizer</h1>
+            <p class="subtitle">Transform AI-written content into natural, human-like research text</p>
+        </header>
+
+        <div class="main-content">
+            <div class="input-section">
+                <label for="input-text">Enter AI-written content:</label>
+                <textarea 
+                    id="input-text" 
+                    placeholder="Paste your AI-generated text here...&#10;&#10;Example: In conclusion, this research demonstrates that artificial intelligence has significant potential in various domains. Furthermore, it is important to note that these findings suggest new avenues for future investigation."
+                    rows="12"
+                ></textarea>
+                <div class="button-group">
+                    <button id="humanize-btn" class="btn-primary">
+                        <span class="btn-text">Humanize Text</span>
+                        <span class="btn-loader" style="display: none;">⏳ Processing...</span>
+                    </button>
+                    <button id="clear-btn" class="btn-secondary">Clear</button>
+                </div>
+            </div>
+
+            <div class="output-section">
+                <div class="output-header">
+                    <label for="output-text">Humanized Output:</label>
+                    <div class="output-actions">
+                        <button id="copy-btn" class="btn-icon" title="Copy to clipboard">
+                            📋 Copy
+                        </button>
+                        <button id="download-btn" class="btn-icon" title="Download as text file">
+                            💾 Download
+                        </button>
+                    </div>
+                </div>
+                <textarea 
+                    id="output-text" 
+                    placeholder="Humanized text will appear here..."
+                    rows="12"
+                    readonly
+                ></textarea>
+                <div id="stats" class="stats" style="display: none;">
+                    <div class="stat-item">
+                        <span class="stat-label">Original Length:</span>
+                        <span id="original-length">0</span> characters
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Humanized Length:</span>
+                        <span id="humanized-length">0</span> characters
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Similarity:</span>
+                        <span id="similarity">0%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="features">
+            <h2>Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Paraphrasing</h3>
+                    <p>Intelligent synonym replacement and sentence restructuring</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✍️</div>
+                    <h3>Natural Language</h3>
+                    <p>Removes AI patterns and makes text sound authentically human</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Plagiarism Removal</h3>
+                    <p>Transforms content to pass plagiarism detection tools</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Research Focused</h3>
+                    <p>Optimized for academic and research domain content</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="notification" class="notification"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
